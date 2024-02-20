@@ -1,0 +1,13 @@
+version: 0.2
+
+env:
+  shell: bash
+  variables:
+    CUSTOM_ENV_VAR: foo-2
+        
+phases:
+  build:
+    commands:
+      - env | sort
+      - echo "I'm in the second build spec!"
+      - cat README.md
